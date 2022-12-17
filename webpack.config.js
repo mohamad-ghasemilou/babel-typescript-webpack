@@ -1,6 +1,15 @@
 module.exports = [
     {
-        entry: "./dist/index.js",
-        mode: 'development'
+        entry: "./src/index.js",
+        mode: 'development',
+        module: {
+            rules: [
+                {
+                    test: /\.(js)$/,
+                    exclude: /node_modules/,
+                    use: ['babel-loader']
+                }
+            ]
+        }
     }
 ]
