@@ -1,6 +1,8 @@
+const path = require("path");
+
 module.exports = [
     {
-        entry: "./src/index.js",
+        entry: path.resolve(__dirname, 'src/index.js'),
         mode: 'development',
         module: {
             rules: [
@@ -10,6 +12,10 @@ module.exports = [
                     use: ['babel-loader']
                 }
             ]
+        },
+        devServer: {
+            port: 8080,
+            static: path.resolve(__dirname, 'dist')
         }
     }
 ]
