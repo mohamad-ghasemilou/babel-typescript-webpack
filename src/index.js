@@ -1,3 +1,5 @@
+import "./styles.scss"
+
 const counter = document.getElementById("counter");
 const incButton = document.getElementById("incrementBtn");
 
